@@ -1,6 +1,7 @@
 <template>
     <div>
       <h1>DashBoard</h1>
+      
   
       <table>
         <caption>Chores</caption>
@@ -52,7 +53,7 @@
   
       onMounted(() => {
         axios
-          .get('https://localhost:7170/api/Chores/GetAll')
+          .get('http://ec2-54-206-19-34.ap-southeast-2.compute.amazonaws.com/api/Chores/GetAll')
           .then((response) => {
             ChoresList.value = response.data.value; // Update the ChoresList value
             console.log('Chores Data:', response.data.value);
@@ -62,7 +63,7 @@
           });
   
         axios
-          .get('https://localhost:7170/api/Expense/GetAll') // Fetch expense data
+          .get('http://ec2-54-206-19-34.ap-southeast-2.compute.amazonaws.com/api/Expense/GetAll') // Fetch expense data
           .then((response) => {
             expenseList.value = response.data.value; // Update the expenseList value
             console.log('Expenses Data:', response.data.value);
@@ -81,6 +82,7 @@
   </script>
   
   <style>
+
     table {
       border: 3px solid black;
       border-collapse: collapse;

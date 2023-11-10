@@ -7,7 +7,7 @@ module.exports = {
   devServer: {
     proxy: {
       '/api': {
-        target: 'https://localhost:7170/api/Expense/GetAll', // Your API endpoint
+        target: 'http://ec2-54-206-19-34.ap-southeast-2.compute.amazonaws.com/api/Expense/GetAll', // Your API endpoint
         changeOrigin: true,
         pathRewrite: { '^/api': '' },
         secure: false
