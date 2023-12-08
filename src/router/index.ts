@@ -3,8 +3,6 @@ import DashBoard from '../components/DashBoard.vue';
 import LogIn from '../components/LogIn.vue'
 import SignUp from '../components/SignUp.vue'
 
-
-
 const routes = [
     {
         path: '/',
@@ -24,7 +22,7 @@ const routes = [
 
     {
         path: '/login',
-        redirect: '/login',
+        
         name: 'login',
         component: {
             template: '<router-view/>',
@@ -40,7 +38,7 @@ const routes = [
 
       {
         path: '/signup',
-        redirect: '/signup',
+        
         name: 'signup',
         component: {
             template: '<router-view/>',
